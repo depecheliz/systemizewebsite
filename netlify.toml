@@ -1,0 +1,46 @@
+[build]
+  publish = "."
+  command = "echo 'Static site — no build step required'"
+
+# ---------------------------------------------------------------------------
+# Redirects
+# ---------------------------------------------------------------------------
+
+# Canonical domain: systemizemethod.com (apex). Permanently redirect the
+# www subdomain to the apex so there is exactly one canonical URL.
+[[redirects]]
+  from = "https://www.systemizemethod.com/*"
+  to = "https://systemizemethod.com/:splat"
+  status = 301
+  force = true
+
+# 404.html is served automatically by Netlify for unmatched routes on a
+# static site; no explicit redirect rule is required for it.
+
+# ---------------------------------------------------------------------------
+# Security headers
+# Kept permissive enough for: Tailwind CDN, Google Fonts, inline config/
+# JSON-LD scripts, the mouse-glow/vapor-text inline styles, and same-origin
+# Netlify Forms submissions. Re-test after any script/style source changes.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com data:;
+      img-src 'self' data:;
+      connect-src 'self';
+      form-action 'self';
+      frame-ancestors 'none';
+      base-uri 'self';
+      object-src 'none';
+    """
+    # Enable once HTTPS is confirmed active on the custom domain:
+    # Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"

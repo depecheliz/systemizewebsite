@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Systemize">
+  <rect x="3" y="3" width="15" height="15" rx="4" stroke="#2e56f2" stroke-width="2.6"/>
+  <path d="M18 18L21 21" stroke="#2e56f2" stroke-width="2.6" stroke-linecap="round"/>
+  <rect x="21" y="21" width="10.5" height="10.5" rx="3" stroke="#2e56f2" stroke-width="2.6"/>
+  <path d="M31.5 31.5L33.5 33.5" stroke="#2e56f2" stroke-width="2.6" stroke-linecap="round"/>
+  <rect x="33.5" y="33.5" width="5" height="5" rx="1.8" fill="#2e56f2"/>
+</svg>

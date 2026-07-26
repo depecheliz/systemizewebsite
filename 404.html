@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found | Systemize</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          stone: { DEFAULT: "#f9f7f3", alt: "#eeece5" },
+          ink: { DEFAULT: "#16171c", soft: "#494b53", faint: "#5b5d66" },
+          line: "#e2ded4",
+          accent: { DEFAULT: "#2e56f2", deep: "#1d3fc7", soft: "#e7ecfe" },
+          violet: { DEFAULT: "#8577e6", text: "#6355c9", soft: "#efedfd" },
+          night: { DEFAULT: "#121319", line: "#2a2c36" },
+          paper: "#f4f2ec",
+        },
+        fontFamily: {
+          display: ["Space Grotesk", "Inter", "sans-serif"],
+          sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-secondary)] antialiased h-screen flex items-center justify-center px-6">
+
+<div class="text-center max-w-md">
+  <div class="flex justify-center mb-6" aria-hidden="true">
+    <svg width="40" height="40" viewBox="0 0 42 42" fill="none">
+      <rect x="3" y="3" width="15" height="15" rx="4" stroke="#2e56f2" stroke-width="2.4"/>
+      <path d="M18 18L21 21" stroke="#35353b" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="21" y="21" width="10.5" height="10.5" rx="3" stroke="#35353b" stroke-width="2.4"/>
+      <path d="M31.5 31.5L33.5 33.5" stroke="#35353b" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="0.1 3"/>
+      <rect x="33.5" y="33.5" width="5" height="5" rx="1.8" fill="none" stroke="#35353b" stroke-width="1.6" stroke-dasharray="1.5 1.5"/>
+    </svg>
+  </div>
+  <p class="font-display text-sm font-semibold text-[var(--accent-soft)] tracking-wide uppercase mb-3">404</p>
+  <h1 class="font-display text-2xl md:text-3xl font-semibold text-[var(--text-primary)] mb-4 balance">This part of the system doesn't exist.</h1>
+  <p class="leading-relaxed mb-8">The page you're looking for may have moved, or the link may be out of date.</p>
+  <a href="index.html" class="inline-flex items-center gap-2 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] px-6 py-3.5 font-medium hover:bg-accent hover:text-white transition-colors">
+    Back to home
+  </a>
+</div>
+
+</body>
+</html>

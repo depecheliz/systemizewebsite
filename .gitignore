@@ -1,0 +1,22 @@
+# Local agent tooling config (not part of the deployed site)
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Environment / secrets — never commit real values
+.env
+.env.*
+!.env.example
+
+# Netlify local state
+.netlify/
+
+# Logs
+npm-debug.log*
+*.log
