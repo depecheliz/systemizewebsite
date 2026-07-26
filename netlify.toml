@@ -14,14 +14,30 @@
   status = 301
   force = true
 
+# Force the canonical .html URL for the two noindexed legal pages so
+# Netlify's automatic pretty-URL alias (/privacy -> /privacy.html) doesn't
+# serve duplicate content at two live paths.
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 301
+  force = true
+
 # 404.html is served automatically by Netlify for unmatched routes on a
 # static site; no explicit redirect rule is required for it.
 
 # ---------------------------------------------------------------------------
 # Security headers
 # Kept permissive enough for: Tailwind CDN, Google Fonts, inline config/
-# JSON-LD scripts, the mouse-glow/vapor-text inline styles, and same-origin
-# Netlify Forms submissions. Re-test after any script/style source changes.
+# JSON-LD scripts, the mouse-glow/vapor-text inline styles, Google Analytics
+# (GA4), and same-origin Netlify Forms submissions. Re-test after any
+# script/style source changes.
 # ---------------------------------------------------------------------------
 [[headers]]
   for = "/*"
@@ -32,11 +48,11 @@
     X-Frame-Options = "DENY"
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
+      script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com;
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       font-src 'self' https://fonts.gstatic.com data:;
-      img-src 'self' data:;
-      connect-src 'self';
+      img-src 'self' data: https://www.google-analytics.com;
+      connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com;
       form-action 'self';
       frame-ancestors 'none';
       base-uri 'self';

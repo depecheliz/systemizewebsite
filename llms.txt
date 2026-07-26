@@ -1,0 +1,33 @@
+# Systemize
+
+> Systemize designs and builds websites, custom platforms, AI-supported workflows, dashboards, and digital products as one connected system for founders and small businesses. Led by founder Liz Beaty.
+
+Systemize turns a business idea or bottleneck into a working digital system, rather than a one-off website or a single automation. The deliverable is an architecture where the site, portal, dashboards, and automations are designed to work together.
+
+## Services
+
+- Websites and digital experiences
+- Custom business platforms and customer onboarding
+- AI business systems: lead qualification, internal AI assistants, CRM automation
+- Executive dashboards and reporting automation
+- Custom web and mobile applications
+- Marketing and growth systems
+
+## Engagement models
+
+- Strategy & System Mapping: for businesses that need clarity and a scalable architecture before committing to a build.
+- Focused Build: a single custom-built system (website, dashboard, workflow, or tool) solving one clear bottleneck.
+- Platform Partnership: staged architecture, development, and testing for larger ideas built for long-term growth.
+
+Projects typically start at $8,000, with most engagements ranging $20,000–$80,000, scoped to goals, complexity, integrations, and launch requirements.
+
+## Pages
+
+- [Homepage](https://systemizemethod.com/): Overview of capabilities, process, selected systems, founder, and engagement models.
+- [Privacy Policy](https://systemizemethod.com/privacy.html)
+- [Terms of Service](https://systemizemethod.com/terms.html)
+
+## Contact
+
+- Email: info@systemizemethod.com
+- Project inquiry form: https://systemizemethod.com/#contact
